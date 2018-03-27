@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'ralewayblack';
+    src: url('raleway-black-webfont.woff2') format('woff2'),
+         url('raleway-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayblack_italic';
+    src: url('raleway-blackitalic-webfont.woff2') format('woff2'),
+         url('raleway-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('raleway-bold-webfont.woff2') format('woff2'),
+         url('raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaybold_italic';
+    src: url('raleway-bolditalic-webfont.woff2') format('woff2'),
+         url('raleway-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('raleway-extrabold-webfont.woff2') format('woff2'),
+         url('raleway-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayextrabold_italic';
+    src: url('raleway-extrabolditalic-webfont.woff2') format('woff2'),
+         url('raleway-extrabolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayextralight';
+    src: url('raleway-extralight-webfont.woff2') format('woff2'),
+         url('raleway-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayextralight_italic';
+    src: url('raleway-extralightitalic-webfont.woff2') format('woff2'),
+         url('raleway-extralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayitalic';
+    src: url('raleway-italic-webfont.woff2') format('woff2'),
+         url('raleway-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('raleway-light-webfont.woff2') format('woff2'),
+         url('raleway-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaylight_italic';
+    src: url('raleway-lightitalic-webfont.woff2') format('woff2'),
+         url('raleway-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('raleway-medium-webfont.woff2') format('woff2'),
+         url('raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: dodgerblue;
+    font-family: "Raleway", Arial, sans-serif;
+}
+
+/* transformacja tekstu */
+
+.wersaliki {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+}
+
+.kapitaliki {
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.kapitaliki {
+    text-transform: lowercase;
+    font-size: 18px;
+    color: white;
+}
+
+p {
+    margin-top: 40px;
+    color: white;
+}
+
+/*
+
+cienie:
+
+text-shadow: 0 1px 0 #ccc,
+
+Kolejno: lewo-prawo, góra-dół, blur, kolor
+
+*/
+
+.shadow {
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+    color: white;
+    margin-top: 50px;
+    font-size: 120px;
+}
+
+/* Transition vs. animation */
+
+.zakladka {
+    background-color: white;
+    width: 100px;
+    margin: 25px;
+    padding: 15px;
+/*    transition: all 2s cubic-bezier(.17,.67,.83,.67);*/
+    animation: obracanie2 2s;
+}
+
+.zakladka:hover {
+    cursor: pointer;
+    color: black;
+    opacity: 0.6;
+    transform: scale(1.5);
+}
+
+@keyframes obracanie {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes obracanie2 {
+    0% {
+    }
+    30% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.4;
+    }
+}
+
+/* infinite - nieskończenie wiele */
+
+/* transformacje 3D */
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#card {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #CCC;
+    margin: 140px;
+    position: absolute;
+    perspective: 1000px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: rotateY(45deg);
+}
+
+.front {
+    background-color: dimgray;
+}
+
+#test {
+    color: white;
+    margin-top: 15px;
+}
